@@ -22,25 +22,22 @@
                 
                 <div class="text-white">
                     
-                    <form action="../Http/userinfoupgrade.inc.php" method="POST" enctype="multipart/form-data">
+                    <form action="../Http/userpassupgrade.inc.php" method="POST">
 
-                    <div class="text-center">
-                        <img src="../public/profiles/<?php echo $userdetail['image']  ?>" id="profile" class="rounded" style="width: 100px;height:100px;"  alt="">
-                        <input type="file" hidden id="fileinput" name="image">
-                    </div>
                         <input type="text" hidden name="id" value="<?php echo $_SESSION['id']?>">
                         <div class="form-group">
-                            <label for="">Name</label>
-                            <input type="text" class="form-control" value="<?php echo $userdetail['name']?>" name="name">
+                            <label for="">old Password</label>
+                            <input type="text" class="form-control"  name="old_password">
                         </div>
                         <div class="form-group">
-                            <label for="">Email</label>
-                            <input type="email" class="form-control" readonly value="<?php echo $userdetail['email']?>" name="email">
+                            <label for="">New Password</label>
+                            <input type="text" class="form-control"  name="new_password">
                         </div>
                         <div class="text-center mt-4">
-                            <button class="btn btn-primary" name="upgrade">Update</button>
-                            <a href="forgot_password.php">Update Password</a>
+                            <button class="btn btn-primary" name="upgradepass">Update Password</button>
+                           
                         </div>
+
                     </form>
                 </div>
             </div>

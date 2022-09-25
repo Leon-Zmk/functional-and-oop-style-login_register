@@ -12,8 +12,6 @@ class User extends UserController{
     public function __construct($name,$password,$email="",$confirm_password="")
     {   
 
-       
-
         $this->name=$name;
         $this->email=$email;
         $this->password=$password;
@@ -51,6 +49,8 @@ class User extends UserController{
         $this->loginUser($this->name,$this->password);
 
     }
+
+  
 
     private function checkEmpty(){
 
